@@ -1,0 +1,24 @@
+server:
+  port: 9877
+  servlet:
+    context-path: /miapp
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pruebas?useSSL=false
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    hibernate:
+      ddl-auto: update
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+      
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
